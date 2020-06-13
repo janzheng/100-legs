@@ -17,11 +17,16 @@
 {#if num > 0}
 	<div class={`Output _flex-${exercises.length} _padding _center _margin-2`}>
 		{#each exercises as ex}
-			<span><img src={`images/day${ex}.png`} alt={`day${ex}`} style={`width:${100/exercises.length}%`} /></span>
+			<img src={`images/day${ex}.png`} alt={`day${ex}`} style={`width:${100/exercises.length}%`} />
 		{/each}
 	</div>
 {/if}
 
+
+
+<div class="_section-page _margin-center _divider-top">
+	<p>Credit goes to <a href="https://my.actionjacquelyn.com/100-barre-sculpted-leg-challenge">Action Jacquelyn</a>. Thanks!</p>
+</div>
 
 
 <script>
@@ -45,6 +50,8 @@
 				console.log('randnum: ', randNum)
 				if(!exercises.includes(randNum))
 					exercises.push(randNum)
+				else
+					randNum = randGen()
 			}
 		}
 	}
