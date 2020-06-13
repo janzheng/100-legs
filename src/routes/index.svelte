@@ -47,11 +47,11 @@
 			let randNum = -1
 			while(!exercises.includes(randNum)) {
 				randNum = randGen()
-				console.log('randnum: ', randNum)
-				if(!exercises.includes(randNum))
+				if(!exercises.includes(randNum) && randNum > 0) {
 					exercises.push(randNum)
-				else
-					randNum = randGen()
+				} else {
+					randNum = -1
+				}
 			}
 		}
 	}
