@@ -1,0 +1,223 @@
+
+
+/* 
+
+	Typography
+  - note that Capsid has its own typography styles
+
+ */
+
+
+%md-sans_serif, .MD {
+  // fixing markdown
+  &, *, p {
+    @extend %font-sans;
+    // font-size: 15px;
+    // line-height: 22px;
+  }
+}
+
+body {
+  background-color: usetheme(body-bg); //$color-gray;
+  color: usetheme(copy);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // color: usetheme(header-color);
+  // color: red !important;
+  // @extend %font-display;
+  // @extend %font-sans;
+
+  &.__roomy {
+    padding-bottom: $size-2x;
+  }
+  &.__title {
+    padding-top: 0 !important;
+  }
+  &.__normal {
+    font-weight: normal;
+  }
+  &.__inline {
+    padding-bottom: $size-half !important;
+  }
+}
+
+
+// semantically used to introduce a page, not meant to surround content
+h1 {
+  // @extend %font-sans;
+  padding-top: $size-2x;
+  padding-bottom: $size-2x;
+  // letter-spacing: 0.23px;
+  font-size: $size-5;
+  line-height: $size-5 * 1.28;
+  font-weight: 300;
+  @extend %font-display;
+  text-transform: uppercase;
+}
+
+h2 {
+// used to separate sections, and is largest element
+// lots of room up to, some at bottom to separate content
+  // @extend %font-sans;
+  padding-top: $size-2x;
+  font-size: $size-4;
+  line-height: $size-4 * 1.34;
+  // @extend %font-display;
+  @extend %font-display;
+  text-transform: uppercase;
+
+  &.__large {
+    font-size: $size-4;
+    padding-bottom: $size-2;
+  }
+}
+
+h3 {
+  // used to introduce subtopics, hugs content but still needs to breathe
+  // @extend %font-sans;
+  // font-family: $font-sans;
+  padding-top: $size-2;
+  font-size: $size-3;
+  line-height: $size-3 * 1.4;
+}
+
+h4 {
+// used to introduce subtopics, hugs content but still needs to breathe
+  // padding-top: $size-2;
+  // line-height: $size-3;
+  font-weight: bold;
+  font-family: $font-sans;
+  font-size: $size-2;
+  line-height: $size-2 * 1.4;
+}
+
+h5 {
+  // font-size: $size + 2px;
+  @extend %font-sans;
+  font-size: $size-2;
+  line-height: $size-2 * 1.6;
+  font-weight: normal;
+}
+
+h6 {
+  @extend %font-sans;
+  font-size: usetheme(font--2);
+  line-height: usetheme(font--2-lh);
+  letter-spacing: 1px;
+}
+
+
+// template / layout 
+.ContentFrame {
+  position: relative;
+
+  // prevent scrolling the page when mobile nav is open
+  &.__open {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+  }
+}
+
+blockquote {
+  // border-left: $border-medium solid;
+  border-color: usetheme(border-color); //$color-tertiary;
+  padding-left: $size-2x;
+
+  &, p {
+    font-size: $font-larger;
+    line-height: $font-larger-lineheight * 1;
+    @extend %font-serif;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: unset;
+    font-style: italic;
+    color: usetheme(brand-copy);
+    // @extend .__antialias;
+  }
+  cite, .source {
+    @extend %font-sans;
+    color: usetheme(copy); //$color-gray;
+    font-size: $size;
+    font-style: normal;
+    color: usetheme(copy);
+  }
+}
+
+
+
+%copy-large {
+  font-size: usetheme(copy-large);
+  line-height: usetheme(copy-large-lh);
+  margin-bottom: $size-3;
+}
+.Copy-large {
+  p, ul, li, table {
+    @extend %copy-large;
+  }
+}
+
+p, ul, li, {
+  // font-size: $font-size-base;
+  // line-height: $font-lineheight;
+  @extend %md-sans_serif;
+
+  padding-left: 0;
+  // @extend %font-serif;
+
+  a { // in-paragraph links
+    // font-weight: 700;
+    &+a {
+    }
+  }
+}
+
+// body links
+a, ._link {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: usetheme(links-decoration); //$color-links;
+  color: usetheme(links); //$color-links;
+  border: 0;
+  position: relative;
+  // color: $color-green;
+  // @extend ._pointer-no_events;
+  // @extend %ease-fast;
+
+  &:visited {
+    color: usetheme(links);
+  };
+
+  &:hover, &:active {
+    color: usetheme(hover); //$color-links;
+    text-decoration-color: usetheme(hover); //$color-links;
+  }
+
+  &._button {
+    text-decoration: none;
+  }
+
+  &.__disabled {
+    color: usetheme(disabled);
+  }
+
+  &.__quiet {
+    // color: usetheme(pink-active);
+    padding-bottom: $size;
+    font-size: $size--1;
+
+    &:hover {
+    }
+
+  }
+}
+
+  .ContentFrame-body a {
+    font-weight: bold;
+  }
+
+
+
+
+
+

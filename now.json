@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "100-legs",
+  "builds": [
+    { "src": "package.json", "use": "now-sapper" }
+  ],
+  "regions": [
+    "lhr"
+  ]
+}
