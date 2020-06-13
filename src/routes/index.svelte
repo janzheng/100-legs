@@ -25,7 +25,7 @@
 
 
 <div class="_section-page _margin-center _divider-top">
-	<p>Credit goes to <a href="https://my.actionjacquelyn.com/100-barre-sculpted-leg-challenge">Action Jacquelyn</a>. Thanks!</p>
+	<p>Credit goes to <a href="https://my.actionjacquelyn.com/100-barre-sculpted-leg-challenge">Action Jacquelyn</a>. Thanks! Github repo: <a href="https://github.com/janzheng/100-legs">https://github.com/janzheng/100-legs</a></p>
 </div>
 
 
