@@ -28,7 +28,7 @@
     "doi-regex": "^0.1.10",
     "flat": "^5.0.0",
     "jsdom": "^16.2.2",
-    "marked": "^1.0.0",
+    "marked": "^4.0.10",
     "metascraper": "^5.11.10",
     "metascraper-author": "^5.11.10",
     "metascraper-clearbit": "^5.11.13",
